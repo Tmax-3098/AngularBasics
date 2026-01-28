@@ -3,13 +3,13 @@
   <ul id="users">
     <!-- @for (i of userArray(); track i.id) { -->
       <li *ngFor="let i of userArray()">
-        <app-user [user]="i" (select)="onSelectUser($event)"></app-user>
+        <app-user [user]="i" [selected]="i.id === selectedUserId" (select)="onSelectUser($event)"></app-user>
       </li>
     <!-- } -->
   </ul>
 
   <!-- @if (selectedUser) { -->
-    <app-tasks *ngIf="selectedUser; else fallback"   [name]="selectedUser.name" [uid]="selectedUser.id"></app-tasks>
+    <app-tasks *ngIf="selectedUser; else fallback"  [name]="selectedUser.name" [uid]="selectedUser.id"></app-tasks>
   <!-- } @else { -->
     <ng-template #fallback>
     <p id="fallback"> Select a user to see task </p>

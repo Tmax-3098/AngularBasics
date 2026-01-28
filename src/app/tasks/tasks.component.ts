@@ -14,6 +14,7 @@ export class TasksComponent {
 
   @Input({required:true}) uid!:string;
   @Input({required:true}) name!:string;
+  
   tasks = [
     {
       id:"t1",
@@ -35,6 +36,12 @@ export class TasksComponent {
   get selectedUserTask(){
     return this.tasks.filter((task) => task.userId === this.uid);
   }
+
+  onCompleteTask(tid: string){
+    this.tasks = this.tasks.filter((task) => task.id !== tid);
+
+  }
+
   
 
   
