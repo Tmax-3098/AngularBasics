@@ -14,7 +14,7 @@ import { TasksComponent } from "./tasks/tasks.component";
 export class AppComponent {
 
   userArray = signal(DUMMY_USERS);
-  selectedUserId:string = 'u1';
+  selectedUserId?:string ;
   onSelectUser(id: string){
     this.selectedUserId = id;
   }
