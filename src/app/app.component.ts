@@ -15,7 +15,7 @@ import { NgFor, NgIf } from "../../node_modules/@angular/common";
 export class AppComponent {
 
   userArray = signal(DUMMY_USERS);
-  selectedUserId?:string ;
+  selectedUserId!:string ;
   onSelectUser(id: string){
     this.selectedUserId = id;
   }
