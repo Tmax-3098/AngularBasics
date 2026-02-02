@@ -42,6 +42,10 @@ export class TasksComponent {
 
   }
 
+  onStartAddTask(){
+    
+  }
+
   
 
   
